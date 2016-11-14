@@ -9,24 +9,42 @@
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
-
-<div class="col-xs-offset-2 col-xs-8" id="todo-container">
-            <h1>Family Credentials</h1>
-            <div id="logout-container"></div>
-            <h3>Family Members</h3>
-            <div class="col-xs-12 new-text-container">
-                <div  class="col-xs-10 newtodo-input ">
-                    <input type="text" class="form-control" id="add-todo-text" placeholder="New Todo Item">
-                </div>
-                <div class=col-xs-2"">
-                    <button type="button" class="btn btn-primary btn-lg col-xs-2 " id="add-todo-button">New Family Member</button>
-                </div>
+<div>
+  <h1>Family Tree</h1>
+</div>
+ <div class="container">
+        <form>
+            <h2>Add New Family Member</h2>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Full Name">
             </div>
-            <h3>Todo</h3>
-            <ul id="incomplete-tasks"></ul>
-            <h3>Completed</h3>
-            <ul id="completed-tasks"></ul>
+            <div class="form-group">
+                <label for="nfm-age" >Age</label>
+                <input type="text" class="form-control" id="age" placeholder="Age"></input>
+            </div>
+            <div class="form-group" id="gender">
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male"> Male
+                </label>
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female"> Female
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="comment">Special Skills</label>
+                <textarea class="form-control" rows="2" id="skills" placeholder="Examples: athletic, crossword puzzle master, nice etc."></textarea>
+            </div>
+            <button class="btn btn-primary" id="submit">Submit</button>
+        </form>
+        <div>
+            <h2>Family Members</h2>
+            <div class="output">
+
+            </div>
         </div>
+
+    </div>
 
 <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
 <script

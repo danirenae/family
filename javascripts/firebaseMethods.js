@@ -24,7 +24,7 @@ oldFB.getFamilyMembers = function(apiKeys, uid){
 oldFB.addFamilyMember = function(apiKeys, newItem){
   return new Promise((resolve, reject)=>{
     $.ajax({
-      method: 'POST',
+      method: 'POST', // this might also be a get - try both
       url: `${apiKeys.databaseURL}/items.json`, // change this
       data: JSON.stringify(newItem),
       dataType: 'json'
@@ -55,7 +55,7 @@ oldFB.editFamilyMember = function(apiKeys, itemId, editedItem){
   return new Promise((resolve, reject)=>{
     $.ajax({
       method: 'PUT',
-      url: `${apiKeys.databaseURL}/items/${itemId}.json`,
+      url: `${apiKeys.databaseURL}/items/${itemId}.json`, // change this
       data: JSON.stringify(editedItem), //this makes sure that whatever is coming back is valid json
       dataType: 'json'
     }).then((response)=>{

@@ -19,3 +19,25 @@ $(document).ready(function(){
   });
 });
 
+$('#nfm-submit').on('click', function(){
+  console.log("button works");
+  let newFamily = {
+    "name" : $('#name').val(),
+    "age" : $('#age').val(),
+    "gender" : $('#gender').val(),
+    "skills" : $('#skills').val() // may have to write this differently?
+  };
+  Family.addFamilyMember(apiKeys, newFamily).then(function(){
+    familyMemberToDOM();
+  });
+});
+
+
+
+
+
+
+
+
+
+
